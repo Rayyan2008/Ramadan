@@ -1,0 +1,112 @@
+:root {
+    --primary-bg: #e0f2fe;
+    --container-bg: rgba(255, 255, 255, 0.9);
+    --option-bg: #f0f8ff;
+    --text-color: #333;
+    --heading-color: #2c3e50;
+    --muted-text: #7f8c8d;
+    --button-bg: #ddd;
+    --button-hover: #ccc;
+    --transition-duration: 0.3s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-bg);
+    color: var(--text-color);
+    transition: all var(--transition-duration) ease;
+}
+
+.theme-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.theme-buttons {
+    display: flex;
+}
+
+.theme-controls button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--button-bg);
+    transition: background-color var(--transition-duration) ease;
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-controls button:hover {
+    background-color: var(--button-hover);
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    background: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.welcome-message h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option {
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--option-bg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.option-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.option h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.option p {
+    font-size: 1em;
+    color: var(--muted-text);
+}
+
+/* Dark Mode */
+body.night-mode {
+    --primary-bg: #212121;
+    --container-bg: rgba(30, 30, 30, 0.9);
+    --option-bg: #37474f;
+    --text-color: #eee;
+}
